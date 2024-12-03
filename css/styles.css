@@ -6,6 +6,14 @@
     font-family: "Poppins", sans-serif;
 
 
+
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    font-family: arial, sans-serif ;
+
 }
 
 .flex
@@ -101,8 +109,79 @@ section.top-do-site.flex
 .txt-topo-site p 
 {
     color: white;
+    margin-bottom: 50px;
+    font-size: 17px;
+}
+
+.img-topo-site img {
+    border-radius: 15px;  
+    width: 120%;  
+    height: auto;  
+}
+
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px
+    }
+}
+
+
+main {
+    margin-bottom: 250px;
+}
+
+/*MINHAS ESPECIALIDADES*/
+
+
+.Formacao .educacao h2 {
+    color: white;
+    text-align: center; 
+    font-weight: bold;  
+
+
+}
+.Formacao .educacao span{
+    color: blueviolet;
+}
+.Formacao .educacao p {
+    font-size: 18px; 
+    color: white; 
+    text-align: center;
+    margin-bottom: 20px;
 
 }
 
 
 
+
+
+
+/*MEU PORTIFOLIO */
+.Portifolio .competencias h3 { 
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+ }
+
+ .Portifolio .competencias span{
+    color: blueviolet;
+
+ }
+.Portifolio .competencias p {
+    color: white;
+    font-size: 17px;
+    line-height: 28px;
+    text-align: center;
+
+ }
