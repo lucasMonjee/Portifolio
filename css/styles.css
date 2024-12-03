@@ -9,6 +9,17 @@
 
 }
 
+
+h3 .titulo { 
+    font-size: 36px;
+    color: white ;
+    text-align: center;
+}
+
+h3 .titulo span {
+    color: blueviolet;
+}
+
 body, html{
     margin: 0;
     padding: 0;
@@ -185,3 +196,6 @@ main {
     text-align: center;
 
  }
+
+
+ /*ESTILOS DAS MINHAS HABILIDADES*/
