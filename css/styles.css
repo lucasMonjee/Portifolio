@@ -9,14 +9,24 @@
 
 }
 
+button:hover, form .btn-salvar input:hover {
+    box-shadow: 0px 0px 8px blueviolet;
+    transform: scale(1.08);
 
-h3 .titulo { 
-    font-size: 36px;
-    color: white ;
-    text-align: center;
 }
 
-h3 .titulo span {
+h2.titulo { 
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+h2.titulo span {
     color: blueviolet;
 }
 
@@ -157,7 +167,7 @@ main {
     color: white;
     text-align: center; 
     font-weight: bold;  
-
+    margin-top: 46px; 
 
 }
 .Formacao .educacao span{
@@ -180,8 +190,8 @@ main {
 .Portifolio .competencias h3 { 
     color: white;
     text-align: center;
-    margin-bottom: 10px;
-    font-weight: bold;
+    margin-bottom: 20px;
+    font-weight: 46px;
 
  }
 
@@ -199,3 +209,59 @@ main {
 
 
  /*ESTILOS DAS MINHAS HABILIDADES*/
+
+section.Portifolio {
+    padding: 40px 4%;
+
+}
+
+section.Portifolio .flex{
+    gap : 80px;
+
+}
+
+.Portifolio .especialidades-box
+{
+    color: #ffffff;
+    padding: 40px ;
+    margin-top: 46px;
+    border-radius: 24px;
+    transition: .2s;
+}
+
+.Portifolio .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #ffffff69;
+}
+
+.Portifolio .especialidades-box h4 {
+font-size: 28;
+margin: 15px 0;
+}
+
+
+/*MEU FORMULARIO*/
+
+section.formulario {
+    padding: 80px 4%;
+
+}
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input{
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
