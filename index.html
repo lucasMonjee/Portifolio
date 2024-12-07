@@ -8,30 +8,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">  
+<link rel="stylesheet" href="css/styles.css">  
+<script defer src="script.js"></script>
 </head>
 <body>
     <header>
         <div class="interface">
-                <h1 class="Nome">Lucas Monje</h1>    
         <nav class="Menu">
             <ul>
-                 <li><a href="#sobre">Sobre mim</a></li>
-                 <li><a href="#Formação">Formação</a></li>
-                 <li><a href="#Portifólio">Portifólio</a></li>
-                 <li>center;href="#Contato">Contato</a></li>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portifolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
         <div class="btn-contato">
-            <a href="#">
-                <button>Contato</button>
-            </a>
+            <button onclick="scrollParaContato()">Contato</button>
         </div>
         </div>
     <header>
 
         <main>
-            <section class="topo-do-site">
+            <section id ="sobre" class="topo-do-site">
                 <div class="interface">
                     <div class="flex">
                         <div class="txt-topo-site">
@@ -42,11 +40,11 @@
                                 Acredito que <strong>tecnologia vai além de código</strong>, é sobre resolver problemas e criar impacto positivo. <br>
                                 Seja bem-vindo ao meu portfólio.
                               </p>
-                                <div class="btn-contato">
-                                <a href="#">
-                                    <button>Entre em contato</button>
+                              <div class="btn-contato">
+                                <a href="https://wa.me/5511910879240" target="_blank">
+                                    <button>Entre em Contato</button>
                                 </a>
-                              </div>
+                            </div>
                         </div>                            
 
                         <div class="img-topo-site">
@@ -59,7 +57,7 @@
         </main>
 
         <main>
-            <section class="Formacao">
+            <section id="formacao" class="Formacao">
                 <div class="educacao">
                     <h2 class="titulo">MINHAS <span>FORMAÇÕES</span></h2>
                     <p>
@@ -85,7 +83,7 @@
             </section>
         </main>
     <main>
-        <section class="Portifolio">
+        <section id="portifolio" class="Portifolio">
             <div class="competencias">
                 <h2 class="titulo">MEUS <span>PROJETOS</span></h2>
                 <p>Embora ainda não tenha projetos totalmente finalizados ou disponíveis para demonstração, estou envolvido em diversos trabalhos e projetos que estão em andamento.<br>
@@ -116,23 +114,49 @@
          </section>      
     </main>
     
-       <section class="formulario">
-            <div class="interface">
-                <h2 class="titulo">FALE <span>COMIGO</span></h2>
-
-                <form action="">
-                    <input type="text" name="" id="" placeholder="Seu nome:" required>
-                    <input type="text" name="" id="" placeholder="Seu email:" required>
-                    <input type="text" name="" id="" placeholder="Seu celular:">
-                    <textarea name="" id="" placeholder="Sua mensagem" required></textarea>
-                    <div class="btn-salvar">
-                        <input type="submit" value="ENVIAR">
-                    </div>
-                </form>
-                
-
+    <section id="contato" class="formulario">
+        <h2 class="titulo fale-comigo">FALE <span>COMIGO</span></h2>
+        <form action="https://formsubmit.co/lmonje556@gmail.com" method="POST" >
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+            <input type="hidden" name="_captcha" value="false"> 
+            <input type="text" name="nome" placeholder="Seu Nome:"  required>
+            <input type="email" name="email" placeholder="Seu E-mail:"  required>
+            <input type="tel" name="celular" placeholder="Seu Celular:" >
+            <textarea name="assunto" placeholder="Assunto:"></textarea>
+            <div class="btn-salvar">
+                <button type="submit" data-button>ENVIAR</button>
             </div>
-       </section>
-
+        </form>
+    </section>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close">&times;</span>
+            <p>Formulário enviado com sucesso!</p>
+        </div>
+    </div>
+    
+    
+    
     </body>
     </html>
+
+    <script>
+           const form = document.querySelector('form');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();  // Impede o envio padrão
+
+    alert('Formulário enviado com sucesso!');
+
+    // Se quiser enviar o formulário ao clicar no botão
+    this.submit();  // Envia o formulário manualmente
+});
+
+function scrollParaContato() {
+        const sectionContato = document.getElementById('contato');
+        if (sectionContato) {
+            sectionContato.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    </script>
